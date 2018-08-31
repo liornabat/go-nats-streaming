@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nats-io/go-nats-streaming"
+	"github.com/liornabat/go-nats-streaming"
 )
 
 var usageStr = `

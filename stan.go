@@ -20,10 +20,9 @@ import (
 	"runtime"
 	"sync"
 	"time"
-
-	"github.com/nats-io/go-nats"
-	"github.com/nats-io/go-nats-streaming/pb"
-	"github.com/nats-io/nuid"
+	"github.com/liornabat/go-nats"
+	"github.com/liornabat/go-nats-streaming/pb"
+	"github.com/liornabat/nuid"
 )
 
 // Version is the NATS Streaming Go Client version

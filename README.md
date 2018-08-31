@@ -15,13 +15,13 @@ NATS Streaming provides the following high-level feature set:
 
 ## Notes
 
-- Please raise questions/issues via the [Issue Tracker](https://github.com/nats-io/go-nats-streaming/issues).
+- Please raise questions/issues via the [Issue Tracker](https://github.com/liornabat/go-nats-streaming/issues).
 
 ## Installation
 
 ```bash
 # Go client
-go get github.com/nats-io/go-nats-streaming
+go get github.com/liornabat/go-nats-streaming
 ```
 
 ## Basic Usage
@@ -293,7 +293,7 @@ message to allow the server to reject messages from a client that has been repla
 
 ### Asynchronous Publishing
 
-The basic publish API (`Publish(subject, payload)`) is synchronous; it does not return control to the caller until the NATS Streaming server has acknowledged receipt of the message. To accomplish this, a [NUID](https://github.com/nats-io/nuid) is generated for the message on creation, and the client library waits for a publish acknowledgement from the server with a matching NUID before it returns control to the caller, possibly with an error indicating that the operation was not successful due to some server problem or authorization error.
+The basic publish API (`Publish(subject, payload)`) is synchronous; it does not return control to the caller until the NATS Streaming server has acknowledged receipt of the message. To accomplish this, a [NUID](https://github.com/liornabat/nuid) is generated for the message on creation, and the client library waits for a publish acknowledgement from the server with a matching NUID before it returns control to the caller, possibly with an error indicating that the operation was not successful due to some server problem or authorization error.
 
 Advanced users may wish to process these publish acknowledgements manually to achieve higher publish throughput by not waiting on individual acknowledgements during the publish operation. An asynchronous publish API is provided for this purpose:
 
